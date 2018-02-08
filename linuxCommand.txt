@@ -1,0 +1,65 @@
+To open terminal
+ctrl+alt+T
+------------------------------------------------------------------------------
+-----------------------To make directory and to move file---------------------
+To make directory in linux
+mkdir /home/usr/folderName
+
+To move directory or file to next folder
+mv abhi ./test
+
+to move directory or file to previous folder
+mv abhi ../
+
+to move to folder from currnt directory to rood directories
+mv abhi /test(test is directory present in root location)
+
+to move folder or file from specific directory
+mv /home/sherpa/Documents/abhi /home/sherpa/Documents/test
+{If you dont want to replace file use '-i'}
+-------------------------------------------------------------------
+----------to create file and to edit file-------------------------
+To create file
+cat > fileName.txt 
+
+To edit file
+vi fileName.txt
+
+To start editing click on Insert key
+
+To save file
+ESC+:w
+
+To close file
+ESC + :q
+-------------------------------------------------------------------------
+-------------To download tar ------------------------------------------
+1.Make directory
+2.Go to directory
+3.tar -xvzf ~/Downloads/kafka.tgz --strip -l
+-------------------------------------------------------------------
+To Set environment variable permanantly  after file extracted from tgz
+
+open bashrc file
+1.gedit ~/.bashrc   or   vi ~/.bashrc
+2.Change environment variable
+declare -x SCALA_HOME= /usr/scala
+declare -x PATH=$SCALA_HOME/bin:$JAVA_HOME/bin:$PATH
+3.source ~/.bashrc
+------------------------------------------------------------------
+To set environment variable for particular commandline
+JAVA_HOME= /usr/java/jdk1.8.0_161
+source /etc/environment
+----------------------------------------------------------------
+To run proxy behind sbt(very Imp)
+export SBT_OPTS="$SBT_OPTS  -Dhttp.proxyHost=brproxy.persistent.co.in -Dhttp.proxyPort=8080  -Dhttp.proxyUser=abhishek_patil -Dhttp.proxyPassword=Abhi@7654 -Dhttps.proxyHost=brproxy.persistent.co.in -Dhttps.proxyPort=8080 -Dhttps.proxyUser=abhishek_patil -Dhttps.proxyPassword=Abhi@7654"
+------------------------------------------------------------
+------------------To remove file or directory---------------
+sudo rm filename.txt    >>remove file
+sudo rm use regular expression to choose multiple file
+sudo rm -r folder-name  >>> Delete folder
+sudo rm -rf folder-name >> delete folder forcefully
+
+------------------------------------------------------------
+---------to rename file------------------------
+mv filename.txt filename2.txt
