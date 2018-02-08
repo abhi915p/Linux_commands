@@ -1,0 +1,36 @@
+nd sbt(very Imp)
+export SBT_OPTS="$SBT_OPTS  -Dhttp.proxyHost=brproxy.persistent.co.in -Dhttp.proxyPort=8080  -Dhttp.proxyUser=abhishek_patil -Dhttp.proxyPassword=Abhi@7654 -Dhttps.proxyHost=brproxy.persistent.co.in -Dhttps.proxyPort=8080 -Dhttps.proxyUser=abhishek_patil -Dhttps.proxyPassword=Abhi@7654"
+
+-----------------------------------------------------------------------------------------------------------------------
+
+To set environment in linux
+cd /etc/profile.d   == To naviagate to profile.d
+vi java_path.sh     == create shell script
+JAVA_HOME="/ ../ "
+PATH=$PATH:$JAVA_HOME/bin
+export JAVA_HOME
+export PATH
+source /etc/profile   == It internally run all shel script present in profile.d
+
+-------------------------------------------------------------------------------------------------------------------------
+
+To set environment variable with ~/.bashrc
+vi ~/.bashrc  ==open .bashrc file
+Change environment variable
+declare -x SCALA_HOME= /usr/scala
+declare -x PATH=$SCALA_HOME/bin:$JAVA_HOME/bin:$PATH
+3.source ~/.bashrc
+
+-------------------------------------------------------------------------------------------------------------------------
+
+To set environment variable for particular commandline
+JAVA_HOME= /usr/java/jdk1.8.0_161
+source /etc/environment
+
+--------------------------------------------------------------------------------------------------------------------------
+
+To setup from .tgz file
+1.Make directory where you want to store the setup from tar file
+2.Go to that location
+3.tar -xvzf ~/Download/abc.tgz -strip 1
+

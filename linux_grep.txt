@@ -1,0 +1,57 @@
+earch for given string in single file
+grep "literal_string" fileName
+grep reandomWord linux_command.txt
+
+2.Search for given string in file format
+grep randomWord  filePattern
+grep randomWord linux*
+
+3.Search for case insensitive using grep  -i
+grep -i string File
+
+4.searcjh for regular expression in files
+grep "REGEX" filename
+
+5.Searching for fill wordsm, not for sub-strings using grep -w
+grep -iw "is" demo_file
+
+6.Displaying lines before/after/around the match using grep -A,-B and -C
+grep -A 5 -i "mv" fileName  ==after
+grep -B 5 -i "mv" fileName == before 
+grep -C 5 -i "mv" fileName == around
+
+---imp--
+7.Highlight the search using grep options
+export GREP_OPTIONS='--color=auto' GREP_COLOR='100;8'
+grep this demo_file
+
+8.Searching in all files recursively using grep -r
+when you wnat to search file into current directory and its sub directory.-r option is one which we need to user
+grep -r "ramesh" *
+
+9.Invert match using grep -v
+it is used to invert the match
+
+10.Display the line which does not match given pattern
+grep -v -e "pattern" -3 "pattern" test_file.txt
+
+11. Counting number of matches using grep -c
+grep -c "pattern" filename
+
+12.Display only file name which matches the given pattern using grep -l
+When you give multiple file to grep as input, it dispaly the name of file which contain the text that matches the pattern
+grep -l "string" filena*
+
+13.Show only match string
+grep -o "is.*line" linuxCommand.txt
+
+14.show the position of mathc in the line
+grep -o  -b "pattern" file
+
+
+15.Show line number while displaying the output using grep -n
+It gives line number of file with the line matched.
+grep -n "go" linuxCommand.txt
+
+
+
